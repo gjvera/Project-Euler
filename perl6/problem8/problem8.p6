@@ -1,1 +1,1 @@
-say max slurp.split( '', :skip-empty ) . rotor( 13 => -12 ) .  map( { [*] $_ } );
+say max slurp.comb . rotor( 13 => -12 ) .  map( { [*] $_ } );
