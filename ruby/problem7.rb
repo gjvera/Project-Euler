@@ -5,7 +5,7 @@ num = 1;
 loop do
     prime = true;
     temp = 2;
-    while temp < num 
+    while temp <= Math.sqrt(num) 
         if num % temp == 0
             prime = false;
             break;
