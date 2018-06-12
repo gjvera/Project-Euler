@@ -7,13 +7,17 @@ def sum_primes_in_range(num, max)
             break
         end
         prime = true;
-        temp = 2;
+        temp = 3;
         while temp <= Math.sqrt(num) 
+            if num % 2 ==0
+                prime = false;
+                break;
+            end
             if num % temp == 0
                 prime = false;
                 break;
             end
-            temp += 1;
+            temp += 2;
         end
         if prime == true
             sum += num
