@@ -7,7 +7,7 @@ def sum_primes_in_range(num, max)
             break
         end
         prime = true;
-        temp = 3;
+        temp = 2;
         while temp <= Math.sqrt(num) 
             if num % 2 ==0
                 prime = false;
@@ -17,7 +17,7 @@ def sum_primes_in_range(num, max)
                 prime = false;
                 break;
             end
-            temp += 2;
+            temp += 1
         end
         if prime == true
             sum += num
