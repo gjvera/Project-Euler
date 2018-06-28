@@ -1,1 +1,1 @@
-say [+] (1 ... ^ 2_000_000).grep({is-prime($_)});
+say [+] (1 ... ^ 2_000_000).hyper.grep({is-prime($_)});
