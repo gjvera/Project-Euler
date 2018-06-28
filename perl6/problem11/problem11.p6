@@ -1,3 +1,5 @@
+#Work in Progress
+
 my @lines = 'problem11.txt'.IO.lines>>.words;
 my @vert-lines = [Z] 'problem11.txt'.IO.lines>>.words;
 sub get-horizontal-products(@lines) {
