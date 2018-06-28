@@ -23,13 +23,12 @@ loop do
         b = (2*m * n)
         c = (m ** 2 + n ** 2)
         if a + b + c == 1000
-            prod = a*b*c;
-            puts"#{prod}"
+            puts"#{a*b*c}"
             break_nested = true;
             break
         end
         n +=1
     end
-    break if break_nested == true;
+    break if break_nested;
     m += 1
 end
