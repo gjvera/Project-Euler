@@ -1,9 +1,18 @@
 import fileinput
 num = ""
-max = 0
-
+max_num = 0
 for line in fileinput.input("num.txt"):
     num += line.rstrip()
 upper_bound = len(str(num))
-for i in range(0, upper_bound):
-    print(str(num)[1])
+begin = 0
+end = 13
+prod = 1
+while end <= upper_bound:
+    prod = 1
+    for i in range(begin, end):
+        prod *= int(num[i])
+    if prod > max_num:
+        max_num = prod
+    begin += 1
+    end += 1
+print(max_num)
