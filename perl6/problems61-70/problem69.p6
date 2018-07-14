@@ -1,15 +1,4 @@
-use Terminal::Spinners;
-
-sub get-totient-val($num) {
-    return $num/(((1..$num).hyper.grep({($num gcd $_) == 1})).elems);
-}
+my @primes = (1..*).grep(*.is-prime);
 my $ans = 1;
-(510_508..512_000).map({
-    say $_;
-   my $res = get-totient-val($_);
-    if $res > $ans {
-        $ans = $_;
-    }
-});
-
-say $ans;
+for @primes -> $prime { last if $ans * $prime > 1_000_000 ; $ans *= $prime; }
+say $ans
