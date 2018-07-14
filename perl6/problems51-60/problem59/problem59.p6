@@ -1,5 +1,6 @@
 my @letters = (97..122).map(*.chr).combinations(3).flatmap(*.permutations).rotor(3);
 my @cipher-text = slurp.split(",");
+<<<<<<< HEAD
 my $string = '';
 for @letters -> @letter-combination {
     $string = ((@letter-combination>>.ord xx *).flat Z+^ @cipher-text)>>.chr.join;
