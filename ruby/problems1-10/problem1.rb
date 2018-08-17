@@ -1,12 +1,8 @@
-sum = 0;
-i = 0;
+sum = 0
+i = 0
 loop do
-    if i == 1000
-        break
-    end
-    if i % 3 == 0 || i % 5 == 0
-        sum += i
-    end
-    i += 1
+  break if i == 1000
+  sum += i if (i % 3).zero? || (i % 5).zero?
+  i += 1
 end
-puts "#{sum}"
+puts sum

@@ -1,16 +1,12 @@
-number = 600851475143;
-i = 2;
-max_divisor = 0;
+number = 600_851_475_143
+i = 2
 loop do
-    if i > Integer.sqrt(number)
-        break;
-    end
-    if number % i == 0
-        max_divisor = i;
-        number = number/i;
-        i = 2;
-    else
-        i += 1;
-    end
+  break if i > Integer.sqrt(number)
+  if (number % i).zero?
+    number /= i
+    i = 2
+  else
+    i += 1
+  end
 end
-puts "#{number}"
+puts number
