@@ -9,14 +9,14 @@ def get_bin_num(num):
 def is_palin(num):
     if num == num[::-1]:
         return True
+    return False
 
 def main():
-    sum = 0
+    sum_palin = 0
     for i in range(1, 1000000):
         bin_num = get_bin_num(i)
         if is_palin(bin_num) and is_palin(str(i)):
-            print("TRUE!!")
-            sum += i
-    print(sum)
+            sum_palin += i
+    print(sum_palin)
 
 if __name__ == '__main__':main()

@@ -7,14 +7,14 @@ def is_prime(num):
     #rule out all even numbers to cut run time
     if num % 2 == 0:
         return False
-    for i in range (2, math.ceil(math.sqrt(num)) + 1):
+    for i in range(2, math.ceil(math.sqrt(num)) + 1):
         if num % i == 0:
             return False
     return True
 
 def is_truncatable(num):
     check_front = str(num)
-    check_back = str(num) 
+    check_back = str(num)
     test_is_prime = True
     check_front = check_front[1:]
     while test_is_prime and check_front != "":
@@ -48,5 +48,3 @@ def main():
 
 
 if __name__ == "__main__":main()
-
-

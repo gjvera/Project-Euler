@@ -5,7 +5,7 @@ def gen_n_triangle_numbers(num):
 
 def is_triangle_word(word):
     triangle_nums = list()
-    for i in range(1,100):
+    for i in range(1, 100):
         triangle_nums.append(gen_n_triangle_numbers(i))
     chars = list(word)
     sum_word = 0
@@ -20,7 +20,6 @@ def is_triangle_word(word):
         iterator += 1
     return False
 
-    
 words = ""
 count = 0
 for line in fileinput.input("words.txt"):
